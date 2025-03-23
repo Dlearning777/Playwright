@@ -38,10 +38,8 @@ module.exports = defineConfig({
     headless : false,
     screenshot : 'on',
    
-   
   },
-
-  /* Configure projects for major browsers */
+/* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
@@ -56,7 +54,5 @@ module.exports = defineConfig({
       use: { browserName: 'webkit' },
     },
   ],
-
-    
 });
 
