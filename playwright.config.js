@@ -27,9 +27,9 @@ module.exports = defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  
   use: {
-    // @ts-ignore
-    browserName: process.env.BROWSER || 'chromium', // Default to Chromium if not set
+    
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -44,9 +44,14 @@ module.exports = defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: process.env.BROWSER || 'chromium', // Get browser from Jenkins, default to chromium
+      use: {
+        // @ts-ignore
+        browserName: process.env.BROWSER || 'chromium',
+      //name: 'chromium',
+     // use: { ...devices['Desktop Chrome'] },
     },
+  },
 
     // {
     //   name: 'firefox',
