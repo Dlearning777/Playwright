@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 const { text } = require('stream/consumers');
 
-test.only('Browser COntext-validating Error login ', async ({page})=>
+test('Browser COntext-validating Error login ', async ({page})=>
     {
         const productName = 'ADIDAS ORIGINAL';
         const products = page.locator(".card-body");
@@ -70,7 +70,7 @@ test.only('Browser COntext-validating Error login ', async ({page})=>
 
 
 
-           await page.pause();
+           //await page.pause();
 
 
     });
