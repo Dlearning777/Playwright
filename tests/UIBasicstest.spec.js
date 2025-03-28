@@ -79,7 +79,7 @@ test('UI control test', async ({page})=>
              console.log(domain);
              // switch to parent page
              await page.locator("#username").type(domain);
-             await page.pause();
+             //await page.pause();
              console.log(await page.locator("#username").textContent());
 
         });
